@@ -76,7 +76,7 @@ namespace dummyapi
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
- testRunner.When("I create an employee with name \'Alex\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("I create an employee with name \'Alex\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
  testRunner.Then("Server returns 201", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 8

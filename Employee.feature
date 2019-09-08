@@ -3,7 +3,7 @@
 
 @post
 Scenario: User can add a new employee
-	When I create an employee with name 'Alex'
+	Given I create an employee with name 'Alex'
 	Then Server returns 201
 	And Name in response is 'Alex'
 
