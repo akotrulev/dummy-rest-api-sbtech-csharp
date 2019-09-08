@@ -5,15 +5,15 @@ using System.Text;
 
 namespace dummyapi.Poco
 {
-    class PutEmployeePoco
+    public class PutEmployeePoco
     {
         [JsonProperty("name")]
-        private String Name { get; set; }
+        public String name { get; set; }
 
         [JsonProperty("salary")]
-        private String Salary { get; set; }
+        public String salary { get; set; }
 
         [JsonProperty("age")]
-        private String Age { get; set; }
+        public String age { get; set; }
     }
 }

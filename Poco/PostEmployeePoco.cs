@@ -5,18 +5,41 @@ using System.Text;
 
 namespace dummyapi.Poco
 {
-    class PostEmployeePoco
+    public class PostEmployeePoco
     {
-        [JsonProperty("id")]
-        private String Id { get; set; }
 
-        [JsonProperty("name")]
-        private String Name { get; set; }
+        public String id { get; set; }
+        public String name { get; set; }
+        public String salary { get; set; }
+        public String age { get; set; }
 
-        [JsonProperty("salary")]
-        private String Salary { get; set; }
+        public void SetDefaultValues()
+        {
+            this.name = "Default name";
+            this.age = "15";
+            this.salary = "0";
+        }
+        public override bool Equals(object obj)
+        {
+            return obj is PostEmployeePoco poco &&
+                   id == poco.id &&
+                   name == poco.name &&
+                   salary == poco.salary &&
+                   age == poco.age;
+        }
 
-        [JsonProperty("age")]
-        private String Age { get; set; }
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(id, name, salary, age);
+        }
+
+        public override string ToString()
+        {
+            return "PostEmployeePoco{" +
+                "name='" + name + '\'' +
+                ", salary='" + salary + '\'' +
+                ", age='" + age + '\'' +
+                '}';
+        }
     }
 }

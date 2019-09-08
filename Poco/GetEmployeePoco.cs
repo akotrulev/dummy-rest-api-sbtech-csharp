@@ -6,21 +6,21 @@ using System.Text;
 
 namespace dummyapi.Poco
 {
-    class GetEmployeePoco
+    public class GetEmployeePoco
     {
         [JsonProperty("id")]
-        private String Id { get; set; }
+        public String id { get; set; }
 
         [JsonProperty("employee_name")]
-        private String Name { get; set; }
+        public String employee_name { get; set; }
 
         [JsonProperty("employee_salary")]
-        private String Salary { get; set; }
+        public String employee_salary { get; set; }
 
         [JsonProperty("employee_age")]
-        private String Age { get; set; }
+        public String employee_age { get; set; }
 
         [JsonProperty("profile_image")]
-        private String profileImage { get; set; }
+        public String profile_image { get; set; }
     }
 }
